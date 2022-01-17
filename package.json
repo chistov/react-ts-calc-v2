@@ -10,6 +10,22 @@
     "test": "npx jest",
     "check": "npm test && npm run lint"
   },
+  "husky": {
+    "hooks": {
+      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "post-applypatch": "echo \"[Husky] post-applypatch\"",
+      "pre-commit": "echo '[Husky] pre-commit'; lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint:staged"
+    ],
+    "*.{json,md,html}": [
+      "prettier --write"
+    ]
+  },
   "author": "Sergey Chistov",
   "license": "ISC",
   "devDependencies": {
@@ -27,6 +43,7 @@
     "html-webpack-plugin": "^4.0.3",
     "husky": "^4.2.3",
     "jest": "^25.2.4",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.0.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.8.3",
