@@ -6,7 +6,6 @@ const rl = createInterface({
     input: process.stdin,
     output: process.stdout,
 });
-asdfsdf dskfj;;;sdfjlkjlkjsdf
 
 const question = (): Promise<null> =>
     new Promise((resolve) => {

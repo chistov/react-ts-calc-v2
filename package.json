@@ -12,19 +12,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run lint:staged"
-    ],
-    "*.{json,md,html}": [
-      "prettier --write"
+      "npm run lint"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "echo '[Husky] pre-commit'; lint-staged"
-    }
   },
   "author": "Sergey Chistov",
   "license": "ISC",
